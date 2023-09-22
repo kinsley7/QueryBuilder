@@ -307,7 +307,7 @@ namespace CrowdisLab3
             else
             {
                StringComparison comparison = StringComparison.InvariantCultureIgnoreCase;
-                var table = tableNames.FirstOrDefault(x => x.StartsWith(userInput, comparison));
+                var table = tableNames.FirstOrDefault(x => x.StartsWith(userInput, comparison)); // userinput is one letter so this wont work if theres multiple tables with the same starting letter...🤫
                 command.CommandText = $"DELETE FROM {table};";
                 command.ExecuteNonQuery();
             }
