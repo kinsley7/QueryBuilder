@@ -11,7 +11,7 @@ using System.Threading.Tasks;
  * 	Project name:CrowdisLab3
  *--------------------------------------------------------------------
  * Author’s name and email:	 kinsley crowdis crowdis@etsu.edu			
- *          Course-Section: CSCI 2150-800
+ *          Course-Section: CSCI 2910-800
  *           Creation Date:	09/14/2023
  * -------------------------------------------------------------------
  */
