@@ -41,20 +41,20 @@ namespace CrowdisLab3
         string type2, int total, int hp, int attack, int defense, int specialAttack,
         int specialDefense, int speed, int generation)
         {
-            this.Id = id;
-            this.DexNumber = dexNumber;
-            this.Name = name;
-            this.Form = form;
-            this.Type1 = type1;
-            this.Type2 = type2;
-            this.Total = total;
-            this.HP = hp;
-            this.Attack = attack;
-            this.Defense = defense;
-            this.SpecialAttack = specialAttack;
-            this.SpecialDefense = specialDefense;
-            this.Speed = speed;
-            this.Generation = generation;
+           Id = id;
+           DexNumber = dexNumber;
+           Name = name;
+           Form = form;
+           Type1 = type1;
+           Type2 = type2;
+           Total = total;
+           HP = hp;
+           Attack = attack;
+           Defense = defense;
+           SpecialAttack = specialAttack;
+           SpecialDefense = specialDefense;
+           Speed = speed;
+           Generation = generation;
         }
 
         // tostring

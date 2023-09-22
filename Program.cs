@@ -213,9 +213,54 @@ namespace CrowdisLab3
                     ///<summary>
                     ///erase all records (deleteall)
                     ///</summary>
-                    Console.WriteLine("Clearing Database...");
-                    stuff.DeleteAll();
-                    Console.WriteLine("Database Erased ✓");
+                    Console.Write("What would you like to clear? 'pokemon', 'banned games', or 'all'? ");
+                    string deleteInput = (Console.ReadLine().ToLower().Trim()).Substring(0,1);
+                deleteInput:
+                    switch (deleteInput)
+                    {
+                        case ("a"):
+                            Console.WriteLine("Clearing All Tables...");
+                            stuff.DeleteAll(deleteInput);
+                            Console.WriteLine("All Tables Cleared ✓");
+
+                            break;
+
+                        case ("b"):
+                            Console.WriteLine("Clearing Banned Games Table...");
+                            stuff.DeleteAll(deleteInput);
+                            Console.WriteLine("Table Cleared ✓\n");
+
+                            List<BannedGame> bannedGamesNew = stuff.ReadAll<BannedGame>();
+                            Console.WriteLine("Click enter to view new Banned Games table: ");
+                            Console.ReadLine();
+                            Console.WriteLine("Viewing Banned Games Table: ");
+                            foreach (var item in bannedGamesNew)
+                            {
+                                Console.WriteLine(item);
+                            }
+
+
+                            break;
+                        case ("p"):
+                            Console.WriteLine("Clearing Pokemon Table...");
+                            stuff.DeleteAll(deleteInput);
+                            Console.WriteLine("Table Cleared ✓\n");
+
+                            List<Pokemon> dataListNew = stuff.ReadAll<Pokemon>();
+                            Console.WriteLine("Click Enter to view new Pokemon Table: ");
+                            Console.ReadLine();
+                            Console.WriteLine("Viewing Pokemon Table: ");
+                            foreach (var item in dataListNew)
+                            {
+                                Console.WriteLine(item);
+                            }
+                            break;
+                        default:
+                            Console.Write("Please enter a valid response: ");
+                            deleteInput = (Console.ReadLine().ToLower().Trim()).Substring(0, 1);
+                            goto deleteInput;
+                            break;
+                    }
 
                     Console.WriteLine("Thanks for using :)");
 

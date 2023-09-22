@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.Sqlite;
+using System;
 using System.Data;
 using System.Reflection;
 using System.Text;
@@ -95,7 +96,7 @@ namespace CrowdisLab3
                 {
                     // same code as the Read
                     int id;
-                    
+
                     // convert integer data to int data type from SQLite's int64 default
                     if (typeof(T).GetProperty(reader.GetName(i)).PropertyType == typeof(int))
                     {
@@ -279,7 +280,7 @@ namespace CrowdisLab3
         }
 
         //TODO: Create DeleteAll method
-        public void DeleteAll()
+        public void DeleteAll(string userInput)
         {
             // help from bing ai. have to select all tables in order to drop them. (no GetSchema method :( )
             var command = connection.CreateCommand();
@@ -295,9 +296,19 @@ namespace CrowdisLab3
             }
             reader.Close();
 
-            for (int i = 1; i < tableNames.Count; i++) //we have to skip the first table so that the master does not get deleted
+            if (userInput == "a")
             {
-                command.CommandText = $"DELETE FROM {tableNames[i]};";
+                for (int i = 1; i < tableNames.Count; i++) //we have to skip the first table so that the master does not get deleted
+                {
+                    command.CommandText = $"DELETE FROM {tableNames[i]};";
+                    command.ExecuteNonQuery();
+                }
+            }
+            else
+            {
+               StringComparison comparison = StringComparison.InvariantCultureIgnoreCase;
+                var table = tableNames.FirstOrDefault(x => x.StartsWith(userInput, comparison));
+                command.CommandText = $"DELETE FROM {table};";
                 command.ExecuteNonQuery();
             }
         }
