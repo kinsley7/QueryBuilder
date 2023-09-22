@@ -95,8 +95,7 @@ namespace CrowdisLab3
                 for (int i = 0; i < reader.FieldCount; i++)
                 {
                     // same code as the Read
-                    int id;
-
+           
                     // convert integer data to int data type from SQLite's int64 default
                     if (typeof(T).GetProperty(reader.GetName(i)).PropertyType == typeof(int))
                     {
