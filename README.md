@@ -31,6 +31,7 @@ Lab 3 for 2910
 
 
 <hr>
+
 ###### i misread the instructions so i had a drop table for my delete all and i spent hours on a create table statement for the create method and fixing all the DBNulls 🤓:)
 ##### please laugh with me, not at me 😓
 
