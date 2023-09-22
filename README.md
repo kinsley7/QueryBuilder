@@ -3,6 +3,7 @@ Lab 3 for 2910
 
 ### displaying all records: 
 <br>
+<img width="291" alt="image" src="https://github.com/kinsley7/QueryBuilder/assets/113950546/6d6ba11e-34b3-4a69-b4c1-39a18f6e836d">
 
 <img width="707" alt="image" src="https://github.com/kinsley7/QueryBuilder/assets/113950546/17f95617-225e-48df-95a3-4c19192c15b6">
 
