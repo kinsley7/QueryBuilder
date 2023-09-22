@@ -19,9 +19,10 @@ Lab 3 for 2910
 <img width="419" alt="image" src="https://github.com/kinsley7/QueryBuilder/assets/113950546/bff1b41f-77b7-4e61-9800-4e1af344eb05">
 
 
+<hr>
 
-
-
+###### i misread the instructions so i had a drop table for my delete all and i spent hours on a create table statement for the create method and fixing all the DBNulls 🤓:)
+##### please laugh with me, not at me 😓
 
 
 
